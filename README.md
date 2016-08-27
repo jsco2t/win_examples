@@ -1,2 +1,42 @@
-# win_examples
-Windows cookbook containing example solutions and/or design patterns
+# win_examples-cookbook
+
+TODO: Enter the cookbook description here.
+
+## Supported Platforms
+
+TODO: List your supported platforms.
+
+## Attributes
+
+<table>
+  <tr>
+    <th>Key</th>
+    <th>Type</th>
+    <th>Description</th>
+    <th>Default</th>
+  </tr>
+  <tr>
+    <td><tt>['win_examples']['bacon']</tt></td>
+    <td>Boolean</td>
+    <td>whether to include bacon</td>
+    <td><tt>true</tt></td>
+  </tr>
+</table>
+
+## Usage
+
+### win_examples::default
+
+Include `win_examples` in your node's `run_list`:
+
+```json
+{
+  "run_list": [
+    "recipe[win_examples::default]"
+  ]
+}
+```
+
+## License and Authors
+
+Author:: YOUR_NAME (<YOUR_EMAIL>)

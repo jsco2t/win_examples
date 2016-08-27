@@ -1,0 +1,7 @@
+name             'win_examples'
+maintainer       'YOUR_NAME'
+maintainer_email 'YOUR_EMAIL'
+license          'All rights reserved'
+description      'Installs/Configures win_examples'
+long_description 'Installs/Configures win_examples'
+version          '0.1.0'
