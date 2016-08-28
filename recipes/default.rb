@@ -2,7 +2,9 @@
 # Cookbook Name:: win_examples
 # Recipe:: default
 #
-# Copyright (C) 2016 YOUR_NAME
+# Copyright (C) 2016 Jason Scott
 #
-# All rights reserved - Do Not Redistribute
+# License: MIT
 #
+
+include_recipe 'win_examples::features'
