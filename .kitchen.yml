@@ -1,16 +1,44 @@
----
 driver:
   name: vagrant
+  provider: vmware_fusion
 
-provisioner:
-  name: chef_solo
+transport:
+  password: vagrant
+  username: vagrant
 
 platforms:
-  - name: ubuntu-14.04
-  - name: centos-7.2
+  - name: jscott/WindowsServer2012
+    provisioner:
+      name: chef_zero
+    #  client_rb:
+    #    environment: example # needed if custom environment is going to be used for test
+    driver:
+      guest: windows
+      communicator: 'winrm'
+    #  box: jscott/WindowsServer2012 # only needed if platform name is differen't then box name
+    #  communicator: winrm
+    transport:
+      name: winrm
+      elevated: true
+    driver_config:
+      guest: windows
+      communicator: 'winrm'
+      #winrm_username: 'vagrant'
+      #winrm_password: 'vagrant'
+      username: 'vagrant'
+      password: 'vagrant'
 
 suites:
   - name: default
     run_list:
+
       - recipe[win_examples::default]
+
     attributes:
+      chef_client:
+        config:
+          log_level: :info
+
+    roles_path: ../../roles
+    environments_path: ../../environments
+    #environment: example
