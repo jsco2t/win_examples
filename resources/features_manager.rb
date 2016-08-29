@@ -22,7 +22,7 @@ property :install_dependencies, [TrueClass, FalseClass], default: false
 features_toinstall = []
 
 def get_features_toinstall
-  if features != nil && features.length == 0
+  if features == nil || features.length == 0
     throw "Input parameter [features] was either null or empty"
   end
 
